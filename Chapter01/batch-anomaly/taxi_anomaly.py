@@ -50,7 +50,7 @@ def simulate_ride_data():
     df['ride_id'] = ride_ids
     return df
 
-
+df = simulate_ride_data()
 
 #==========================================
 # Clustering with DBSCAN
@@ -124,7 +124,7 @@ if __name__ == "__main__":
 
     # Create some nice plots with create_and_show_plot=True (in a notebook)
     X = df[['ride_dist', 'ride_time']]
-    results = cluster_and_label(X, create_and_show_plot=False)
+    results = cluster_and_label(X, create_and_show_plot=True)
     df['label'] = results['labels']
     
     # Output your results to json
